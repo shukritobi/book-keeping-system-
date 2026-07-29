@@ -9,3 +9,5 @@ out
 .vercel
 supabase/.branches
 supabase/.temp
+
+*.tsbuildinfo
