@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { loginSchema } from "@/lib/validation";
 
-function message(path: string, key: "error" | "message", value: string) {
+function message(path: string, key: "error" | "message", value: string): never {
   const query = new URLSearchParams({ [key]: value });
   redirect(`${path}?${query.toString()}`);
 }
